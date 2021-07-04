@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/andre/AndroidStudioProjects/DialogExample/app/src/main/res/drawable/background_fill.xml" value="0.18640350877192982" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/DialogExample/app/src/main/res/drawable/border.xml" value="0.3223684210526316" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/DialogExample/app/src/main/res/drawable/border_activity_element.xml" value="0.67" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/DialogExample/app/src/main/res/drawable/border_not_activity_element.xml" value="0.3223684210526316" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/DialogExample/app/src/main/res/drawable/custom_thumb.xml" value="0.18640350877192982" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/DialogExample/app/src/main/res/drawable/progress.xml" value="0.18640350877192982" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/DialogExample/app/src/main/res/drawable/progress_fill.xml" value="0.18640350877192982" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/DialogExample/app/src/main/res/drawable/thumb_personal.xml" value="0.3223684210526316" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/DialogExample/app/src/main/res/layout/activity_main.xml" value="0.2046875" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/DialogExample/app/src/main/res/layout/dialog_refuel.xml" value="0.28771929824561404" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

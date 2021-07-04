@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Dialog Example</string>
+
+    <!-- Type fuel -->
+    <string name="fragment_pay_refuel_text_ai92">АИ-92</string>
+    <string name="fragment_pay_refuel_text_ai95">АИ-95</string>
+    <string name="fragment_pay_refuel_text_ai98">АИ-98</string>
+    <string name="fragment_pay_refuel_text_ai100">АИ-100</string>
+    <string name="fragment_pay_refuel_text_dt">ДТ</string>
+
+    <!-- Buttons -->
+    <string name="fragment_pay_refuel_text_button_apply">Оплатить</string>
+    
+    <!-- Other -->
+    <string name="fragment_pay_refuel_text_value_fuel"> л</string>
+    <string name="fragment_pay_refuel_text_value_currency"> Р</string>
+    <string name="fragment_pay_refuel_text_currency_and_value_pay"> р/литр</string>
+    <string name="fragment_pay_refuel_text_dialog_header">Рекомендуемый тип топлива: </string>
+</resources>

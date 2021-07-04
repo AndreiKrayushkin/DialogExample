@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha=".10"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/image_total"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/orange"
+        android:background="@drawable/ic_baseline_error_outline_24"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/text_total"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/text_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_pay_refuel_text_dialog_header"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/image_total"
+        app:layout_constraintEnd_toStartOf="@id/text_header_value_fuel"
+        app:layout_constraintTop_toTopOf="@id/image_total"
+        app:layout_constraintBottom_toBottomOf="@id/image_total"
+        android:layout_margin="5dp"/>
+    <TextView
+        android:id="@+id/text_header_value_fuel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="92"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/text_total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_total"
+        app:layout_constraintBottom_toBottomOf="@id/image_total"/>
+
+    <!-- Начало АИ-92 элемента -->
+
+    <ImageView
+        android:id="@+id/background_ai92"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_total"
+        app:layout_constraintEnd_toStartOf="@id/background_ai95"
+        android:layout_margin="20dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:onClick="onCLickFuel"/>
+
+    <TextView
+        android:id="@+id/title_ai92"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_pay_refuel_text_ai92"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/background_ai92"
+        app:layout_constraintEnd_toEndOf="@id/background_ai92"
+        app:layout_constraintTop_toTopOf="@id/background_ai92"
+        app:layout_constraintBottom_toTopOf="@+id/price_value_ai92"/>
+
+    <TextView
+        android:id="@+id/price_value_ai92"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/background_ai92"
+        app:layout_constraintEnd_toStartOf="@+id/price_type_ai92"
+        app:layout_constraintTop_toBottomOf="@id/title_ai92"
+        app:layout_constraintBottom_toBottomOf="@+id/background_ai92"/>
+
+    <TextView
+        android:id="@+id/price_type_ai92"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_pay_refuel_text_currency_and_value_pay"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/price_value_ai92"
+        app:layout_constraintEnd_toEndOf="@id/background_ai92"
+        app:layout_constraintTop_toBottomOf="@id/title_ai92"
+        app:layout_constraintBottom_toBottomOf="@+id/background_ai92"/>
+
+    <!-- Конец АИ-92 элемента -->
+
+
+    <!-- Начало АИ-95 элемента -->
+
+    <ImageView
+        android:id="@+id/background_ai95"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toEndOf="@id/background_ai92"
+        app:layout_constraintTop_toBottomOf="@id/text_total"
+        app:layout_constraintEnd_toStartOf="@id/background_ai98"
+        android:layout_margin="20dp"
+        android:onClick="onCLickFuel"/>
+
+    <TextView
+        android:id="@+id/title_ai95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_pay_refuel_text_ai95"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/background_ai95"
+        app:layout_constraintEnd_toEndOf="@id/background_ai95"
+        app:layout_constraintTop_toTopOf="@id/background_ai95"
+        app:layout_constraintBottom_toTopOf="@+id/price_value_ai95"/>
+
+    <TextView
+        android:id="@+id/price_value_ai95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/background_ai95"
+        app:layout_constraintEnd_toStartOf="@+id/price_type_ai95"
+        app:layout_constraintTop_toBottomOf="@id/title_ai92"
+        app:layout_constraintBottom_toBottomOf="@+id/background_ai95"/>
+
+    <TextView
+        android:id="@+id/price_type_ai95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_pay_refuel_text_currency_and_value_pay"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/price_value_ai95"
+        app:layout_constraintEnd_toEndOf="@id/background_ai95"
+        app:layout_constraintTop_toBottomOf="@id/title_ai95"
+        app:layout_constraintBottom_toBottomOf="@+id/background_ai95"/>
+
+    <!-- Конец АИ-95 элемента -->
+
+
+    <!-- Начало АИ-98 элемента -->
+
+    <ImageView
+        android:id="@+id/background_ai98"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toEndOf="@id/background_ai95"
+        app:layout_constraintTop_toBottomOf="@id/text_total"
+        app:layout_constraintEnd_toStartOf="@id/background_ai100"
+        android:layout_margin="20dp"
+        android:onClick="onCLickFuel"/>
+
+    <TextView
+        android:id="@+id/title_ai98"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_pay_refuel_text_ai98"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/background_ai98"
+        app:layout_constraintEnd_toEndOf="@id/background_ai98"
+        app:layout_constraintTop_toTopOf="@id/background_ai98"
+        app:layout_constraintBottom_toTopOf="@+id/price_value_ai98"/>
+
+    <TextView
+        android:id="@+id/price_value_ai98"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30"
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/background_ai98"
+        app:layout_constraintEnd_toStartOf="@+id/price_type_ai98"
+        app:layout_constraintTop_toBottomOf="@id/title_ai98"
+        app:layout_constraintBottom_toBottomOf="@+id/background_ai98"/>
+
+    <TextView
+        android:id="@+id/price_type_ai98"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_pay_refuel_text_currency_and_value_pay"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/price_value_ai98"
+        app:layout_constraintEnd_toEndOf="@id/background_ai98"
+        app:layout_constraintTop_toBottomOf="@id/title_ai98"
+        app:layout_constraintBottom_toBottomOf="@+id/background_ai98"/>
+
+    <!-- Конец АИ-98 элемента -->
+
+
+    <!-- Начало АИ-100 элемента -->
+
+    <ImageView
+        android:id="@+id/background_ai100"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toEndOf="@id/background_ai98"
+        app:layout_constraintTop_toBottomOf="@id/text_total"
+        app:layout_constraintEnd_toStartOf="@id/background_dt"
+        android:layout_margin="20dp"
+        android:onClick="onCLickFuel"/>
+
+    <TextView
+        android:id="@+id/title_ai100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_pay_refuel_text_ai100"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/background_ai100"
+        app:layout_constraintEnd_toEndOf="@id/background_ai100"
+        app:layout_constraintTop_toTopOf="@id/background_ai100"
+        app:layout_constraintBottom_toTopOf="@+id/price_value_ai100"/>
+
+    <TextView
+        android:id="@+id/price_value_ai100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="40"
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/background_ai100"
+        app:layout_constraintEnd_toStartOf="@+id/price_type_ai100"
+        app:layout_constraintTop_toBottomOf="@id/title_ai100"
+        app:layout_constraintBottom_toBottomOf="@+id/background_ai100"/>
+
+    <TextView
+        android:id="@+id/price_type_ai100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_pay_refuel_text_currency_and_value_pay"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/price_value_ai100"
+        app:layout_constraintEnd_toEndOf="@id/background_ai100"
+        app:layout_constraintTop_toBottomOf="@id/title_ai100"
+        app:layout_constraintBottom_toBottomOf="@+id/background_ai100"/>
+
+    <!-- Конец АИ-100 элемента -->
+
+
+    <!-- Начало ДТ элемента -->
+
+    <ImageView
+        android:id="@+id/background_dt"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toEndOf="@id/background_ai100"
+        app:layout_constraintTop_toBottomOf="@id/text_total"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        android:onClick="onCLickFuel"/>
+
+    <TextView
+        android:id="@+id/title_dt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_pay_refuel_text_dt"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/background_dt"
+        app:layout_constraintEnd_toEndOf="@id/background_dt"
+        app:layout_constraintTop_toTopOf="@id/background_dt"
+        app:layout_constraintBottom_toTopOf="@+id/price_value_dt"/>
+
+    <TextView
+        android:id="@+id/price_value_dt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25"
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/background_dt"
+        app:layout_constraintEnd_toStartOf="@+id/price_type_dt"
+        app:layout_constraintTop_toBottomOf="@id/title_dt"
+        app:layout_constraintBottom_toBottomOf="@+id/background_dt"/>
+
+    <TextView
+        android:id="@+id/price_type_dt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_pay_refuel_text_currency_and_value_pay"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/price_value_dt"
+        app:layout_constraintEnd_toEndOf="@id/background_dt"
+        app:layout_constraintTop_toBottomOf="@id/title_dt"
+        app:layout_constraintBottom_toBottomOf="@+id/background_dt"/>
+
+    <!-- Конец ДТ элемента -->
+
+    <ImageView
+        android:id="@+id/background_seekbar"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        app:layout_constraintStart_toStartOf="@id/seekBar"
+        app:layout_constraintEnd_toEndOf="@id/seekBar"
+        app:layout_constraintTop_toTopOf="@id/seekBar"
+        app:layout_constraintBottom_toBottomOf="@id/seekBar"
+        android:backgroundTint="@color/dark_grey"
+        android:background="@drawable/border"/>
+
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/background_ai92"
+        app:layout_constraintStart_toStartOf="parent"
+        android:thumb="@drawable/thumb_personal"
+        android:progressDrawable="@drawable/progress"
+        android:progress="50"
+        android:max="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="40dp"/>
+
+    <ImageView
+        android:id="@+id/background_full_value"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/border"
+        app:backgroundTint="@color/black"
+        android:alpha=".20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_apply_pay"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/title_full_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="3500"
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/background_full_value"
+        app:layout_constraintEnd_toStartOf="@id/title_type_fuel"
+        app:layout_constraintTop_toTopOf="@id/background_full_value"
+        app:layout_constraintBottom_toBottomOf="@+id/background_full_value"/>
+
+    <TextView
+        android:id="@+id/title_type_fuel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_pay_refuel_text_value_fuel"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/title_full_value"
+        app:layout_constraintEnd_toEndOf="@id/background_full_value"
+        app:layout_constraintTop_toTopOf="@id/background_full_value"
+        app:layout_constraintBottom_toBottomOf="@+id/background_full_value"/>
+
+    <Button
+        android:id="@+id/button_apply_pay"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="@string/fragment_pay_refuel_text_button_apply"
+        android:background="@drawable/border"
+        app:backgroundTint="@color/orange"
+        app:layout_constraintStart_toEndOf="@id/background_full_value"
+        app:layout_constraintTop_toTopOf="@id/background_full_value"
+        app:layout_constraintBottom_toBottomOf="@id/background_full_value"
+        app:layout_constraintEnd_toStartOf="@id/background_full_value_pay"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        android:id="@+id/background_full_value_pay"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/black"
+        android:background="@drawable/border"
+        android:alpha=".20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/background_full_value"
+        app:layout_constraintBottom_toBottomOf="@id/background_full_value"
+        app:layout_constraintStart_toEndOf="@id/button_apply_pay"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/title_full_value_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/background_full_value_pay"
+        app:layout_constraintEnd_toStartOf="@id/title_type_pay"
+        app:layout_constraintTop_toTopOf="@id/background_full_value_pay"
+        app:layout_constraintBottom_toBottomOf="@+id/background_full_value_pay"/>
+
+    <TextView
+        android:id="@+id/title_type_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_pay_refuel_text_value_currency"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/title_full_value_pay"
+        app:layout_constraintEnd_toEndOf="@id/background_full_value_pay"
+        app:layout_constraintTop_toTopOf="@id/background_full_value_pay"
+        app:layout_constraintBottom_toBottomOf="@+id/background_full_value_pay"/>
+
+    <ImageView
+        android:id="@+id/close_dialog_fragment"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_close_24"
+        app:tint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
