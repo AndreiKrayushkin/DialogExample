@@ -100,6 +100,7 @@ public class DialogRefuel extends DialogFragment{
             @Override
             public void onClick(View v) {
                 Log.v(KEY_LOG, "Оплата проведена успешно");
+                dismiss();
             }
         });
 
