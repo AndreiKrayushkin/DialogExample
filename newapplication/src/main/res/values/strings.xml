@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">New Application</string>
+    <string name="head_title">Выбор сервера</string>
+    <string name="my_server">Мой сервер</string>
+    <string name="all_servers">Все сервера</string>
+    <string name="value_max_users">/1000</string>
+</resources>
