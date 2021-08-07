@@ -70,9 +70,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
+                    android:text="@string/all_servers"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/text_button_size"
-                    android:text="@string/my_server" />
+                    android:textSize="@dimen/text_button_size" />
             </RelativeLayout>
 
         </LinearLayout>
