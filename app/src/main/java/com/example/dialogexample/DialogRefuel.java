@@ -8,15 +8,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
+import android.widget.TextSwitcher;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.fragment.app.DialogFragment;
+
+import java.util.ArrayList;
 
 public class DialogRefuel extends DialogFragment{
     private String type_fuel;
@@ -29,10 +34,10 @@ public class DialogRefuel extends DialogFragment{
     ImageView background_dt;
     Button buttonApplyPayFuel;
     ImageView closeDialogFragment;
-    TextView textViewValueFuel;
+    TextSwitcher textViewValueFuel;
     SeekBar seekBar;
     View view;
-    TextView textViewTotalPrice;
+    TextSwitcher textViewTotalPrice;
     TextView textViewTitle;
     AlphaAnimation animator;
 
@@ -141,7 +146,7 @@ public class DialogRefuel extends DialogFragment{
     private void sumTotalPrice (int valueFuel, int priceFuel, View view) {
         textViewTotalPrice = view.findViewById(R.id.title_full_value_pay);
         int totalPrice = valueFuel * priceFuel;
-        setAnimationTextView(textViewTotalPrice);
+        animationText(textViewTotalPrice);
         textViewTotalPrice.setText(String.valueOf(totalPrice));
     }
 
@@ -150,7 +155,7 @@ public class DialogRefuel extends DialogFragment{
      * @param seekBar
      */
     private void setValueFuelFromSeekbar(SeekBar seekBar) {
-        setAnimationTextView(textViewValueFuel);
+        animationText(textViewValueFuel);
         textViewValueFuel.setText(String.valueOf(seekBar.getProgress()));
     }
 
@@ -216,18 +221,19 @@ public class DialogRefuel extends DialogFragment{
      */
     private void setAnimationImageView(ImageView imageView) {
         animator = new AlphaAnimation(.0f, 1.0f);
-        animator.setDuration(500);
+        animator.setDuration(200);
         imageView.startAnimation(animator);
     }
 
     /**
      * Общая анимация для текста
-     * @param textView
+     * @param textSwitcher
      */
-    private void setAnimationTextView(TextView textView) {
-        animator = new AlphaAnimation(.0f, 1.0f);
-        animator.setDuration(300);
-        textView.startAnimation(animator);
+    private void animationText(TextSwitcher textSwitcher) {
+        Animation inAnimation = AnimationUtils.loadAnimation(requireContext(), android.R.anim.fade_in);
+        Animation outAnimation = AnimationUtils.loadAnimation(requireContext(), android.R.anim.fade_out);
+        textSwitcher.setInAnimation(inAnimation);
+        textSwitcher.setOutAnimation(outAnimation);
     }
 
     /**
