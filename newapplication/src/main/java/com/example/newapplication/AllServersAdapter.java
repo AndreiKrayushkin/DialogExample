@@ -12,14 +12,21 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AllServersAdapter extends RecyclerView.Adapter<AllServersAdapter.AllServersHolder> {
 
-    private final List<DataServer> dataServers;
+    private List<DataServ> dataServers;
+    private OnClickListener onClickListener;
 
-    AllServersAdapter(List<DataServer> dataServers) {
+    interface OnClickListener {
+        void click (DataServ dataServer);
+    }
+
+    public AllServersAdapter(List<DataServ> dataServers, OnClickListener onClickListener) {
         this.dataServers = dataServers;
+        this.onClickListener = onClickListener;
     }
 
     @NonNull
@@ -32,7 +39,7 @@ public class AllServersAdapter extends RecyclerView.Adapter<AllServersAdapter.Al
 
     @Override
     public void onBindViewHolder(@NonNull AllServersHolder holder, int position) {
-        DataServer dataServer = dataServers.get(position);
+        DataServ dataServer = dataServers.get(position);
         holder.nameServer.setText(dataServer.getNameServer());
         Integer numberOfUsers = dataServer.getNumberOfUsers();
         holder.currentNumberUsers.setText(numberOfUsers.toString());
@@ -45,6 +52,7 @@ public class AllServersAdapter extends RecyclerView.Adapter<AllServersAdapter.Al
 
         holder.maxValueUsers.setTextColor(ContextCompat.getColor(holder.maxValueUsers.getContext(),
                 dataServer.getBgColor()));
+
     }
 
     @Override
@@ -52,7 +60,7 @@ public class AllServersAdapter extends RecyclerView.Adapter<AllServersAdapter.Al
         return dataServers.size();
     }
 
-    public static class AllServersHolder extends RecyclerView.ViewHolder {
+    public class AllServersHolder extends RecyclerView.ViewHolder {
         final TextView nameServer;
         final TextView currentNumberUsers;
         TextView maxValueUsers;
@@ -65,6 +73,14 @@ public class AllServersAdapter extends RecyclerView.Adapter<AllServersAdapter.Al
             maxValueUsers = itemView.findViewById(R.id.max_value_users);
             bgColor = itemView.findViewById(R.id.bg_color);
             progressBar = itemView.findViewById(R.id.progress_bar_server);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    DataServ dataServ = dataServers.get(getLayoutPosition());
+                    onClickListener.click(dataServ);
+                }
+            });
         }
     }
 }

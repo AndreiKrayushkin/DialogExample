@@ -26,19 +26,14 @@ public class MainActivity extends AppCompatActivity implements OnChangeFragmentL
 
         activeAllServersFragment();
 
-        buttonAllServers.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onFragmentChange(1, null);
-                activeAllServersFragment();
-            }
+        buttonAllServers.setOnClickListener((view) -> {
+            onFragmentChange(1, null);
+            activeAllServersFragment();
         });
-        buttonThisServer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onFragmentChange(2, null);
-                activeThisServersFragment();
-            }
+
+        buttonThisServer.setOnClickListener((view) -> {
+            onFragmentChange(2, null);
+            activeThisServersFragment();
         });
 
         getSupportFragmentManager().beginTransaction()
